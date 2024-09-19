@@ -6,7 +6,7 @@ INSTALL_DIR="$HOME/domaintrackr"
 if ! command -v git &> /dev/null; then
     echo "git tidak ditemukan. Menginstal git..."
     sudo apt-get update
-    sudo apt-get install -y git
+    sudo apt-get install -y git whois iputils-ping
 fi
 
 if [ ! -d "$INSTALL_DIR" ]; then
