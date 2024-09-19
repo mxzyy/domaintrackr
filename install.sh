@@ -29,4 +29,4 @@ CRON_JOB+="\n@daily cd $INSTALL_DIR && ./alert.sh >> $INSTALL_DIR/alert.log 2>&1
 
 (crontab -l; echo -e "$CRON_JOB") | crontab -
 
-echo "Instalasi selesai. Ketiga program akan dijalankan setiap hari."
+echo "Instalasi selesai."
