@@ -26,9 +26,9 @@ cd "$INSTALL_DIR" || exit
 ./alert.sh
 ./export.sh
 
-CRON_JOB="@daily cd $INSTALL_DIR && ./app.sh >> $INSTALL_DIR/app.log 2>&1"
-CRON_JOB+="\n@daily cd $INSTALL_DIR && ./export.sh >> $INSTALL_DIR/export.log 2>&1"
-CRON_JOB+="\n@daily cd $INSTALL_DIR && ./alert.sh >> $INSTALL_DIR/alert.log 2>&1"
+CRON_JOB="@daily cd $INSTALL_DIR && ./app.sh
+CRON_JOB+="\n@daily cd $INSTALL_DIR && ./export.sh
+CRON_JOB+="\n@daily cd $INSTALL_DIR && ./alert.sh"
 
 (crontab -l; echo -e "$CRON_JOB") | crontab -
 
