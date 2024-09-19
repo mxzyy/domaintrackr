@@ -18,6 +18,7 @@ else
     git pull origin main  
 fi
 
+chmod +x "$INSTALL_DIR"/*.sh
 
 echo "Menjalankan program..."
 cd "$INSTALL_DIR" || exit
