@@ -3,8 +3,8 @@
 # Nama file JSON dan CSV
 JSON_FILE="result.json"
 CSV_FILE="result.csv"
-TELEGRAM_BOT_TOKEN="6269039385:AAFG8_BkyqVHKTIsq6qLgY1WeBMF_96z8xo" 
-CHAT_ID="-1002184336839"
+TELEGRAM_BOT_TOKEN="" 
+CHAT_ID=""
 
 # Fungsi untuk mengubah JSON ke CSV
 json_to_csv() {
