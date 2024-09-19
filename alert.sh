@@ -47,7 +47,7 @@ check_domain_expiry() {
     days_remaining=$(echo "$entry" | jq -r '.days_remaining')
     status=$(echo "$entry" | jq -r '.status')
 
-        if [[ $days_remaining -le 7 && $days_remaining -ge 1 ]]; then
+        if [[ $days_remaining -le 7 && $days_remaining -ge 0 ]]; then
             echo "Mengirimkan alert untuk domain: $domain (Sisa hari: $days_remaining)"
             send_telegram_alert "$domain" "$registrar" "$created" "$expires" "$days_remaining" "$status"
         fi
